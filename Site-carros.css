@@ -1,0 +1,574 @@
+body{
+    background: rgb(236, 237, 242);
+}
+
+body header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #ffffff;
+    height: 36px;
+    border-bottom: #f1f1f1;
+}
+
+body header .logo_motores img{
+    width: 150px;
+}
+
+body header nav .ul_principal{
+    display: flex;
+    align-items: center;
+}
+body header nav .ul_principal li{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #5e5e5e;
+    padding: 22px 10px 22px;
+    cursor: pointer;
+}
+
+body header nav .ul_principal li i{
+    padding: 10px;
+}
+
+body header nav .ul_principal .Compra,
+body header nav .ul_principal .Vender,
+body header nav .ul_principal .Servicos,
+body header nav .ul_principal .Noticias_WM1,
+body header nav .ul_principal .ajuda,
+header .login_e_paginas ul{
+    display: none;
+    z-index: 2;
+}
+
+body header nav .ul_principal li,
+body header .login_e_paginas li{
+    position: relative;
+}
+
+body header nav .ul_principal .li_after:hover{
+    border-bottom: 3px solid #bd0000;
+}
+
+body header nav .ul_principal li:hover > ul,
+body header .login_e_paginas li:hover > ul{
+    position: absolute;
+    margin-top: 24px;
+    margin-left: -90px;
+    border: 2px solid #f5f5f5;
+    width: 210px;
+    background: #ffffff;
+    font-size: 14px;
+    display: block;
+}
+
+body header nav .ul_principal li:hover > ul > li{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
+    color: #000;
+}
+
+body header nav .ul_principal li:hover > ul{
+    animation: transpare normal 1.5s;
+}
+
+
+
+@keyframes transpare{
+    0%{
+        background: transparent;
+        color: transparent;
+        width: 290px;
+    }
+    100%{
+        background: #ffffff;
+        color: #000;
+        width: 210px;
+    }
+}
+
+body header nav .ul_principal li:hover > ul > li i{
+    transition: 1s;
+    margin-left: 2px;
+    
+    animation: margin normal 0.4s;
+}
+
+@keyframes margin {
+    0%{
+        margin-left: 30px;
+        color: #ffffff;
+    }
+    100%{
+        margin-left: 5px;
+        color: #000;
+    }
+}
+
+body header nav .ul_principal li:hover > ul > li:hover{
+    background: #f0f0f0;
+    cursor: pointer;
+}
+
+body header .login_e_paginas li ul{
+    width: 10px;
+}
+
+
+body header .login_e_paginas{
+    display: flex;
+    align-items: center;
+    border-left: 1px solid #5e5e5e1a;
+}
+
+
+body header .login_e_paginas li{
+    display: flex;
+    margin: 10px;
+}
+
+body header .login_e_paginas .login{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 25px;
+    cursor: pointer;
+}
+
+body header .login_e_paginas .login i{
+    padding: 0 5px;
+}
+
+body header .login_e_paginas li:hover > ul{
+    margin-top: 38px;
+    margin-left: -20px;
+    
+    font-size: 14px;
+}
+
+body header .login_e_paginas .login > .login_ul{
+    width: 140px;
+}
+
+body header .login_e_paginas .login .login_ul li{
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
+    cursor: pointer;
+}
+
+body header .login_e_paginas .login > .login_ul li:hover{
+    background: #ebebeb;
+    font-size: 14px;
+}
+
+body header .login_e_paginas .login:hover > .login_ul li i{
+    animation: margin normal 0.4s;
+}
+
+body header .login_e_paginas .login > .login_ul{
+    animation: transparelogin normal 1.5s;
+}
+
+@keyframes transparelogin{
+    0%{
+        background: transparent;
+        color: transparent;
+        width: 170px;
+    }
+    100%{
+        background: #ffffff;
+        color: #000;
+        width: 140px;
+    }
+}
+
+.login_ul li a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.aside_lateral{
+    display: none;
+}
+
+.aside_lateral .icon_aside{
+    font-size: 30px;
+}
+
+.aside_lateral .icon_aside:hover{
+    cursor: pointer;
+    background: #5e5e5e3a;
+    border-radius: 100%;
+}
+
+.aside_lateral input{
+    display: none;
+}
+
+.aside_lateral aside{
+    transition: 2s;
+    z-index: 3;
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    background: #ffffff;
+    width: 100%;
+    height: auto
+}
+
+.segunda_logo{
+    text-align: center;
+}
+
+.segunda_logo img{
+    width: 150px;
+
+}
+
+.login_e_lojista{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.aside_lateral .aside_movimentor .login_e_lojista .label_01,
+.aside_lateral .aside_movimentor .login_e_lojista .label_02{
+    font-size: 17px;
+    padding: 10px;
+}
+
+.aside_lateral .aside_movimentor .login_e_lojista .label_01:hover,
+.aside_lateral .aside_movimentor .login_e_lojista .label_02:hover{
+    background: #e9e9e9;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.ul_principal2 li{
+    position: relative;
+    z-index: 4;
+    padding: 18px;
+    margin: 10px;
+    font-size: 18px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-bottom: .5px solid #5e5e5e5e;
+}
+
+.ul_principal2 li ul{
+    margin-top: 10px;
+    background: #44444418;
+    border-radius: 20px;
+}
+
+.ul_principal2 li ul li{
+    font-size: 15px;
+    cursor: pointer;
+    border-bottom: .5px solid #0000005e;
+
+}
+
+.ul_principal2 li ul li:hover{
+    background: #6d6d6d2a;
+    border-radius: 10px 10px;
+}
+
+#check2:checked ~ .aside_movimentor{
+    transition: 2s;
+    left: 0;
+}
+
+.ul_principal2 li:hover ul li{
+    margin-left: 2%;
+    display: block;
+}
+
+.flex_ajuster{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.foto_e_form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.foto_e_form form ul{
+    display: flex;
+    border: 2px solid #5e5e5e10;
+    padding-top: 5px;
+    border-radius: 20px;
+}
+
+.foto_e_form form ul li{
+    padding: 12px;
+    background: #f5f5f5;
+    border-radius: 20px;
+    margin: 5px;
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-bottom: 3px solid transparent;
+
+    cursor: pointer;
+}
+
+.foto_e_form form ul li:hover{
+    transition: 1s;
+    border-bottom: 3px solid #bd0000;
+    animation: pinga infinite .6s;
+}
+
+@keyframes pinga{
+    0%{
+        margin-top: 0;
+        border-bottom: 3px solid #0013bd
+    }
+    25%{
+        margin-top: -1px;
+        border-bottom: 3px solid #000000
+    }
+    50%{
+        margin-top: -2px;
+        border-bottom: 3px solid #dd0000
+    }
+    75%{
+        margin-top: -1px;
+        border-bottom: 3px solid #ee9b00
+    }
+    100%{
+        margin-top: 0px;
+        border-bottom: 3px solid #be0000
+    }
+}
+
+.foto_e_form form .input_icon{
+    width: 100%;
+    text-align: center;
+}
+
+.formulario_de_pesquisa_car .input_icon input{
+    width: 80%;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid #e0e0e0;
+    padding: 5px 10px 5px 50px;
+    margin-top: 25px;
+    font-size: 16px;
+}
+
+.formulario_de_pesquisa_car .input_icon input:focus{
+    box-shadow:10px 10px 10px #e7e7e7;
+    outline: #ffffff;
+}
+
+.formulario_de_pesquisa_car i{
+    position: absolute;
+    z-index: 1;
+    margin-top: 37px;
+    margin-left: 10px;
+    font-size: 19px;
+}
+
+.formulario_de_pesquisa_car{
+    text-align: center;
+}
+
+.formulario_de_pesquisa_car button{
+    color: #ffffff;
+    width: 90%;
+    background: #db0000;
+    padding: 15px 0;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-weight: bolder;
+}
+
+.Categorias h1{
+    margin: 30px 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #5e5e5e;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.flex_buttons_slider{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.flex_buttons_slider button{
+    z-index: 2;
+    height: 35px;
+    font-size: 25px;
+    font-weight: bolder;
+    position: absolute;
+    border-radius: 100%;
+    background: #ffffff52;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.flex_buttons_slider:hover > button{
+    display: block;
+}
+
+
+.flex_buttons_slider button:hover{
+    background: #ffffff;
+}
+
+.flex_buttons_slider button:nth-child(1){
+    left: 90px;
+}
+
+.flex_buttons_slider button:nth-child(3){
+    right: 90px;
+}
+
+.Categorias{
+    max-width: 100%;
+}
+
+.Categorias .container1,
+.Categorias .container2,
+.Categorias .container3{
+    display: flex;
+    overflow: auto;
+    width: 90%;
+    margin: auto;
+}
+
+.Categorias .container1 figure,
+.Categorias .container2 figure,
+.Categorias .container3 figure{
+    position: relative;
+    z-index: 1;
+    margin: 15px;
+}
+
+.Categorias .container1 figure img,
+.Categorias .container2 figure img,
+.Categorias .container3 figure img{
+    border-radius: 20px;
+    width: 263px;
+    height: 220px;
+    filter: grayscale(20%);
+    cursor: pointer;
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+}
+
+.Categorias .container1 figure:hover,
+.Categorias .container2 figure:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.Categorias .container1 figure figcaption,
+.Categorias .container2 figure figcaption,
+.Categorias .container3 figure figcaption{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.Categorias .container2 figure,
+.Categorias .container3 figure{
+    background: #ffffff;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.Categorias .container2 figure img{
+    width: 205px;
+    height: 130px;
+}
+
+.Categorias .container2 figure figcaption{
+    top: 20px;
+    color: rgba(117, 117, 117, 0.8);
+    font-size: 17px;
+}
+
+.Categorias .container2 figure figcaption strong{
+    color: #bd0000;
+    font-size: 20px;
+}
+
+.Categorias .container3 figure{
+    width: 200px;
+    height: 140px;
+    flex-wrap: wrap;
+    height: auto;
+    border-radius: 0;
+}
+
+
+
+.Categorias .container3 figure img{
+    width: 200px;
+    height: 140px;
+    border-radius: 0 0 0 0;
+}
+
+.Categorias .container3 figure figcaption{
+    margin-top: 30px;
+    margin-right: 15px;
+    position: relative;
+    left: 10px;
+    color: #000000;
+    font-size: 12px;
+}
+
+.Categorias .container3 figure figcaption h3{
+    font-weight: 700;
+}
+
+.Categorias .container3 figure figcaption h4{
+    margin-top: 5px;
+    color: #a5a5a5;
+}
+
+.Categorias .container3 figure figcaption span{
+    font-size: 27px;
+    color: #444444;
+}
+
+.Categorias .container3 figure figcaption .localidade{
+    border-radius: 0 0 20px 20px;
+    margin: 0;
+}
+
+.Categorias .container3 figure figcaption .localidade p{
+    margin-top: 2px;
+}
+
+
+@media (max-width:830px) {
+    
+
+    .aside_lateral{
+        display: block;
+    }
+
+    header nav:nth-child(2){
+        display: none;
+    }
+    header #login_e_paginas{
+        display: none;
+    }
+}
